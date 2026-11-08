@@ -3,581 +3,572 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#061008">
+<meta name="theme-color" content="#041008">
 
 <title>GreenScape | Nature Photography</title>
-
-<meta name="description" content="Discover the beauty of nature through GreenScape by Shahriar Ahsan Samy.">
-
-<meta name="google-site-verification" content="uOqGP7ETZB_D8IT_ed-zaPVyfs4OsnUCELp2U5qM3cA">
-
-<link rel="preconnect" href="https://images.unsplash.com">
+<meta name="description" content="Explore the beauty of nature with GreenScape by Shahriar Ahsan Samy.">
 
 <style>
-:root {
-  --bg:#061008;
-  --panel:#0c1b10;
-  --green:#75e000;
-  --light:#a5f550;
-  --white:#f4f8f1;
-  --muted:#b7c5b7;
+:root{
+  --bg:#030b06;
+  --panel:#0a1b10;
+  --green:#72ed27;
+  --light:#b5ff83;
+  --white:#f5fff1;
+  --muted:#b7c9b8;
 }
 
-* {
+*{
   margin:0;
   padding:0;
   box-sizing:border-box;
 }
 
-html {
+html{
   scroll-behavior:smooth;
-  scroll-padding-top:100px;
+  scroll-padding-top:80px;
 }
 
-body {
+body{
   background:var(--bg);
   color:var(--white);
-  font-family:Arial,Helvetica,sans-serif;
-  line-height:1.6;
+  font-family:Arial,sans-serif;
+  overflow-x:hidden;
 }
 
-a {
+a{
   color:inherit;
   text-decoration:none;
 }
 
-.container {
-  width:92%;
-  max-width:1200px;
-  margin:auto;
+img{
+  display:block;
+  max-width:100%;
 }
 
 /* HEADER */
 
-header {
-  background:#050d07;
-  border-bottom:1px solid #75e00044;
+header{
   position:sticky;
   top:0;
-  z-index:100;
+  z-index:1000;
+  background:rgba(3,12,6,.95);
+  backdrop-filter:blur(15px);
+  border-bottom:1px solid #254526;
 }
 
-.navbar {
-  min-height:75px;
+.navbar{
+  max-width:1200px;
+  margin:auto;
+  min-height:68px;
+  padding:10px 18px;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:15px;
 }
 
-.logo {
-  font-size:27px;
+.logo{
+  font-size:25px;
   font-weight:900;
+  color:var(--green);
   letter-spacing:-1px;
 }
 
-.logo span {
-  color:var(--green);
+.logo span{
+  color:white;
 }
 
-.nav-links {
+.menu-btn{
+  display:none;
+  background:none;
+  border:0;
+  color:white;
+  font-size:28px;
+  cursor:pointer;
+}
+
+.nav-links{
   display:flex;
+  gap:22px;
   align-items:center;
-  gap:20px;
 }
 
-.nav-links a {
-  color:#dce8da;
+.nav-links a{
   font-size:13px;
   font-weight:bold;
+  transition:.3s;
 }
 
-.nav-links a:hover {
+.nav-links a:hover{
   color:var(--green);
 }
 
 /* HERO */
 
-.hero {
-  min-height:430px;
+.hero{
+  min-height:440px;
+  position:relative;
   display:flex;
   align-items:center;
-  background:
-  linear-gradient(90deg,#061008ed 5%,#061008a6 55%,#06100833),
-  url("https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1800&q=85");
-  background-size:cover;
-  background-position:center;
-  padding:70px 0;
-}
-
-.hero-content {
-  max-width:650px;
-}
-
-.hero-small {
-  color:var(--light);
-  font-size:25px;
-  font-style:italic;
-  font-family:Georgia,serif;
-}
-
-.hero h1 {
-  font-size:clamp(48px,8vw,78px);
-  line-height:1.1;
-  margin:5px 0 15px;
-  letter-spacing:-2px;
-}
-
-.hero h1 span {
-  color:var(--green);
-}
-
-.hero p {
-  color:#e0e9de;
-  font-size:17px;
-}
-
-.hero .creator {
-  font-size:14px;
-  color:var(--light);
-  margin-top:12px;
-}
-
-.hero-button {
-  display:inline-block;
-  margin-top:22px;
-  background:var(--green);
-  color:#071006;
-  padding:12px 25px;
-  border-radius:30px;
-  font-weight:bold;
-}
-
-/* SECTIONS */
-
-section {
-  padding:55px 0;
-}
-
-.section-title {
-  text-align:center;
-  margin-bottom:30px;
-}
-
-.section-title small {
-  color:var(--green);
-  letter-spacing:3px;
-  font-weight:bold;
-}
-
-.section-title h2 {
-  font-family:Georgia,serif;
-  font-size:34px;
-  margin-top:5px;
-  color:var(--light);
-}
-
-.section-title p {
-  color:var(--muted);
-  font-size:14px;
-  margin-top:8px;
-}
-
-/* GALLERIES */
-
-.gallery-section {
-  background:#09150c;
-}
-
-.filter-buttons {
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:10px;
-  margin-bottom:28px;
-}
-
-.filter-buttons button {
-  padding:9px 17px;
-  border-radius:25px;
-  border:1px solid #75e00055;
-  background:#102516;
-  color:white;
-  cursor:pointer;
-  font-weight:bold;
-}
-
-.filter-buttons button.active,
-.filter-buttons button:hover {
-  background:var(--green);
-  color:#071006;
-}
-
-.gallery-grid {
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-}
-
-.photo-card {
-  background:#102016;
-  border-radius:12px;
   overflow:hidden;
-  border:1px solid #75e00044;
+  background:#07140a;
 }
 
-.photo-card img {
+.hero-slides{
+  position:absolute;
+  inset:0;
+}
+
+.hero-slides img{
+  position:absolute;
   width:100%;
-  height:230px;
+  height:100%;
   object-fit:cover;
-  display:block;
-  cursor:zoom-in;
-  transition:.4s;
+  opacity:0;
+  animation:heroSlide 18s infinite;
 }
 
-.photo-card:hover img {
-  transform:scale(1.04);
+.hero-slides img:nth-child(1){animation-delay:0s}
+.hero-slides img:nth-child(2){animation-delay:6s}
+.hero-slides img:nth-child(3){animation-delay:12s}
+
+@keyframes heroSlide{
+  0%{opacity:0;transform:scale(1)}
+  8%{opacity:1}
+  30%{opacity:1;transform:scale(1.08)}
+  38%{opacity:0}
+  100%{opacity:0}
 }
 
-.photo-card h3 {
-  font-size:15px;
-  padding:12px 13px 0;
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,rgba(0,10,3,.88),rgba(0,10,3,.2));
 }
 
-.photo-card p {
-  color:var(--light);
-  font-size:12px;
-  padding:0 13px 12px;
+.hero-content{
+  position:relative;
+  z-index:2;
+  padding:55px 7%;
+  max-width:750px;
 }
 
-.photo-card.hide {
-  display:none;
+.hero-small{
+  font-family:Georgia,serif;
+  font-style:italic;
+  font-size:25px;
 }
 
-.empty-message {
+.hero h1{
+  font-size:clamp(45px,9vw,78px);
+  line-height:1.05;
+  color:var(--green);
+  margin:8px 0;
+}
+
+.hero h1 span{
+  color:white;
+}
+
+.hero-content h2{
+  font-size:20px;
+  margin:15px 0;
+}
+
+.hero-content p{
+  line-height:1.7;
+  color:#e2eee1;
+  margin-bottom:22px;
+}
+
+.btn{
+  display:inline-block;
+  padding:13px 25px;
+  border-radius:30px;
+  background:var(--green);
+  color:#061008;
+  font-weight:bold;
+  transition:.3s;
+}
+
+.btn:hover{
+  transform:translateY(-4px);
+  box-shadow:0 0 22px #72ed2777;
+}
+
+/* SECTION */
+
+section{
+  max-width:1200px;
+  margin:auto;
+  padding:48px 18px;
+}
+
+.section-title{
   text-align:center;
-  color:var(--muted);
-  padding:25px;
-  display:none;
+  font-size:27px;
+  color:var(--green);
+  margin-bottom:25px;
 }
 
-/* UPLOAD AREA */
-
-.upload-area {
+.section-subtitle{
   text-align:center;
-  margin-top:30px;
-  padding:22px;
-  border:1px dashed #75e00077;
-  border-radius:12px;
-  background:#0d1d11;
-}
-
-.upload-area h3 {
-  color:var(--light);
-  margin-bottom:5px;
-}
-
-.upload-area p {
   color:var(--muted);
   font-size:13px;
-  margin-bottom:15px;
+  margin-top:-15px;
+  margin-bottom:25px;
 }
 
-.upload-button {
-  display:inline-block;
-  padding:10px 20px;
-  background:var(--green);
-  color:#071006;
-  border-radius:25px;
+/* CATEGORY */
+
+.categories{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+}
+
+.category{
+  height:145px;
+  border-radius:14px;
+  overflow:hidden;
+  position:relative;
+  border:1px solid #426b31;
+}
+
+.category img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.5s;
+}
+
+.category:hover img{
+  transform:scale(1.12);
+}
+
+.category span{
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  text-align:center;
+  padding:13px 5px;
   font-weight:bold;
+  background:linear-gradient(transparent,#000d);
+}
+
+/* GALLERY */
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:13px;
+}
+
+.photo{
+  height:190px;
+  border-radius:12px;
+  overflow:hidden;
+  border:1px solid #385c2c;
   cursor:pointer;
+  background:var(--panel);
 }
 
-.file-input {
-  display:none;
+.photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .6s;
 }
 
-.upload-note {
-  margin-top:12px;
-  font-size:12px;
-  color:#b7c5b7;
+.photo:hover img{
+  transform:scale(1.1);
+}
+
+/* AUTO MOVING STRIP */
+
+.moving-strip{
+  overflow:hidden;
+  padding:10px 0 20px;
+}
+
+.moving-track{
+  display:flex;
+  width:max-content;
+  gap:14px;
+  animation:movePhotos 35s linear infinite;
+}
+
+.moving-track img{
+  width:220px;
+  height:140px;
+  object-fit:cover;
+  border-radius:12px;
+  border:2px solid #47782c;
+}
+
+@keyframes movePhotos{
+  from{transform:translateX(0)}
+  to{transform:translateX(-50%)}
 }
 
 /* ABOUT */
 
-.about-footer {
-  display:grid;
-  grid-template-columns:1.3fr 1fr;
-  gap:35px;
-  padding:45px 5%;
-  background:linear-gradient(120deg,#0b1c0e,#030904);
-  border-top:1px solid #75e00055;
-}
-
-.about-column {
-  min-width:0;
-}
-
-.about-column + .about-column {
-  border-left:1px solid #75e00044;
-  padding-left:35px;
-}
-
-.about-title {
-  color:var(--light);
-  font-size:21px;
-  margin-bottom:20px;
-}
-
-.about-inner {
+.about-card{
+  background:linear-gradient(140deg,#0d2412,#061008);
+  border:1px solid #34572d;
+  border-radius:20px;
+  padding:30px;
   display:flex;
   align-items:center;
-  gap:18px;
+  gap:30px;
+  box-shadow:0 15px 35px #0006;
 }
 
-.profile-photo {
-  width:125px;
-  height:125px;
+.profile-photo{
+  width:190px;
+  height:190px;
   flex-shrink:0;
   border-radius:50%;
   object-fit:cover;
-  border:3px solid var(--green);
-  padding:3px;
-  background:#142a18;
+  border:4px solid var(--green);
+  box-shadow:0 0 25px #72ed2755;
 }
 
-.about-copy strong {
-  font-size:16px;
+.about-text h3{
+  color:var(--light);
+  font-size:25px;
+  margin-bottom:15px;
 }
 
-.about-copy p {
-  color:#c5d2c2;
-  font-size:13px;
+.about-text p{
+  color:#d5e4d4;
   line-height:1.9;
-  margin-top:7px;
+  font-size:15px;
 }
 
-.creator-name {
-  color:var(--light)!important;
+.creator{
+  margin-top:15px;
+  color:var(--green)!important;
+  font-weight:bold;
 }
 
 /* SOCIAL */
 
-.social-row {
+.social-row{
   display:flex;
-  gap:13px;
+  justify-content:center;
+  gap:17px;
   flex-wrap:wrap;
-  margin:12px 0 20px;
 }
 
-.social-item {
+.social-row a{
   width:48px;
   height:48px;
   display:flex;
   align-items:center;
   justify-content:center;
   border-radius:50%;
-  font-size:23px;
+  background:#142719;
+  border:1px solid #456c36;
+  font-size:21px;
   font-weight:bold;
-  color:white;
+  transition:.3s;
 }
 
-.youtube {
-  background:#e60018;
-}
-
-.tiktok {
-  background:#171717;
-  border:1px solid #777;
-}
-
-.facebook {
-  background:#1877f2;
-}
-
-.social-note {
-  font-family:Georgia,serif;
-  font-style:italic;
-  font-size:20px;
-  color:#dcebd8;
-}
-
-.social-note span {
-  color:var(--green);
+.social-row a:hover{
+  background:var(--green);
+  color:#071008;
+  transform:translateY(-5px);
 }
 
 /* FOOTER */
 
-.bottom-footer {
-  background:#020704;
+footer{
+  border-top:1px solid #31502c;
+  padding:24px 15px;
   text-align:center;
-  padding:20px 12px;
-  color:#aab7a8;
-  font-size:12px;
-  border-top:1px solid #ffffff12;
+  color:var(--muted);
+  font-size:13px;
+  line-height:2;
 }
 
-.bottom-footer strong {
-  color:var(--light);
+footer span{
+  color:var(--green);
 }
 
 /* LIGHTBOX */
 
-.lightbox {
-  display:none;
+.lightbox{
   position:fixed;
   inset:0;
-  z-index:200;
   background:#000e;
+  z-index:2000;
+  display:none;
   align-items:center;
   justify-content:center;
   padding:20px;
 }
 
-.lightbox.open {
+.lightbox img{
+  max-width:100%;
+  max-height:85vh;
+  border-radius:12px;
+  border:2px solid var(--green);
+}
+
+.lightbox.active{
   display:flex;
 }
 
-.lightbox img {
-  max-width:95%;
-  max-height:90vh;
-  object-fit:contain;
-  border:2px solid var(--green);
-  border-radius:10px;
-}
-
-.close-lightbox {
+.close-lightbox{
   position:absolute;
-  top:15px;
+  top:20px;
   right:22px;
+  font-size:35px;
   color:white;
-  font-size:40px;
-  background:none;
-  border:0;
   cursor:pointer;
 }
-<style>
+
 /* MOBILE */
 
-@media(max-width:800px) {
-  .navbar {
-    flex-wrap:wrap;
-    padding:12px 0;
+@media(max-width:700px){
+
+  .navbar{
+    min-height:62px;
   }
 
-  .nav-links {
+  .logo{
+    font-size:23px;
+  }
+
+  .menu-btn{
+    display:block;
+  }
+
+  .nav-links{
+    display:none;
+    position:absolute;
+    top:62px;
+    left:0;
     width:100%;
-    justify-content:center;
-    gap:15px;
-    flex-wrap:wrap;
+    background:#06130a;
+    padding:20px;
+    flex-direction:column;
+    align-items:stretch;
+    gap:0;
+    border-bottom:1px solid #36552d;
   }
 
-  .gallery-grid {
+  .nav-links.active{
+    display:flex;
+  }
+
+  .nav-links a{
+    padding:14px;
+    border-bottom:1px solid #1d321f;
+    font-size:15px;
+  }
+
+  .hero{
+    min-height:390px;
+  }
+
+  .hero-content{
+    padding:40px 22px;
+  }
+
+  .hero-small{
+    font-size:21px;
+  }
+
+  .hero h1{
+    font-size:49px;
+  }
+
+  .hero-content h2{
+    font-size:17px;
+  }
+
+  section{
+    padding:35px 14px;
+  }
+
+  .section-title{
+    font-size:24px;
+  }
+
+  .categories{
     grid-template-columns:repeat(2,1fr);
-  }
-
-  .about-footer {
-    grid-template-columns:1fr;
-  }
-
-  .about-column + .about-column {
-    border-left:0;
-    border-top:1px solid #75e00044;
-    padding:25px 0 0;
-  }
-}
-
-@media(max-width:480px) {
-  .hero {
-    min-height:350px;
-    padding:45px 0;
-  }
-
-  .hero h1 {
-    font-size:48px;
-  }
-
-  .nav-links {
     gap:10px;
   }
 
-  .nav-links a {
-    font-size:11px;
+  .category{
+    height:125px;
   }
 
-  .gallery-grid {
+  .gallery-grid{
+    grid-template-columns:repeat(2,1fr);
     gap:10px;
   }
 
-  .photo-card img {
+  .photo{
     height:145px;
   }
 
-  .photo-card h3 {
-    font-size:13px;
+  .moving-track img{
+    width:175px;
+    height:115px;
   }
 
-  .about-inner {
-    align-items:flex-start;
-    gap:12px;
+  .about-card{
+    flex-direction:column;
+    text-align:center;
+    padding:25px 18px;
+    gap:20px;
   }
 
-  .profile-photo {
-    width:90px;
-    height:90px;
+  .profile-photo{
+    width:165px;
+    height:165px;
   }
 
-  .section-title h2 {
-    font-size:28p
-<style>
- /* About Me Mobile Layout Fix */
-@media (max-width: 600px) {
-
-  .about-inner {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 22px !important;
-    width: 100% !important;
+  .about-text h3{
+    font-size:23px;
   }
 
-  .profile-photo {
-    width: 160px !important;
-    height: 160px !important;
-    object-fit: cover;
-    flex-shrink: 0;
+  .about-text p{
+    font-size:14px;
+    line-height:1.9;
   }
+}
 
-  .about-copy {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    text-align: center !important;
-    box-sizing: border-box;
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:0.01ms!important;
+    animation-iteration-count:1!important;
+    scroll-behavior:auto!important;
   }
-
-  .about-copy p {
-    width: 100% !important;
-    word-break: normal;
-    overflow-wrap: break-word;
-    line-height: 1.9;
-  }
-  } </style>
+}
+</style>
 </head>
 
 <body>
 
+<!-- HEADER -->
+
 <header>
-  <div class="container navbar">
+  <div class="navbar">
 
-    <a href="#home" class="logo">
-      Green<span>Scape</span>
-    </a>
+    <a href="#home" class="logo">🍃 Green<span>Scape</span></a>
 
-    <nav class="nav-links">
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+
+    <nav class="nav-links" id="navLinks">
       <a href="#home">Home</a>
-      <a href="#world">World Nature</a>
-      <a href="#myphotos">My Photography</a>
+      <a href="#categories">Categories</a>
+      <a href="#gallery">Gallery</a>
       <a href="#about">About Me</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -585,398 +576,251 @@ section {
   </div>
 </header>
 
-<main>
-
 <!-- HERO -->
 
-<section class="hero" id="home">
-  <div class="container hero-content">
+<div class="hero" id="home">
 
+  <div class="hero-slides">
+    <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=1600" alt="Forest">
+    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600" alt="Mountains">
+    <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=1600" alt="Nature landscape">
+  </div>
+
+  <div class="hero-content">
     <div class="hero-small">Welcome to</div>
 
-    <h1>Green<span>Scape</span></h1>
+    <h1>Green<span>Scape</span> 🍃</h1>
 
-    <p>Discover the Beauty of Nature</p>
+    <h2>Discover the Beauty of Nature</h2>
 
-    <p class="creator">
-      A Nature Photography Gallery by
-      <strong>Shahriar Ahsan Samy</strong>
+    <p>
+      A Nature Photography Website by<br>
+      <strong>Shahriar Ahsan Samy 💚</strong>
     </p>
 
-    <a href="#world" class="hero-button">
-      Explore Nature →
+    <a href="#gallery" class="btn">Explore Gallery →</a>
+  </div>
+
+</div>
+
+<!-- CATEGORIES -->
+
+<section id="categories">
+
+  <h2 class="section-title">🍃 Nature Categories 🍃</h2>
+
+  <div class="categories">
+
+    <a class="category" href="#gallery">
+      <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=500" alt="Forest">
+      <span>🌲 Forest</span>
+    </a>
+
+    <a class="category" href="#gallery">
+      <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=500" alt="Mountains">
+      <span>⛰ Mountains</span>
+    </a>
+
+    <a class="category" href="#gallery">
+      <img src="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?w=500" alt="Rivers">
+      <span>🌊 Rivers</span>
+    </a>
+
+    <a class="category" href="#gallery">
+      <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=500" alt="Flowers">
+      <span>🌸 Flowers</span>
+    </a>
+
+    <a class="category" href="#gallery">
+      <img src="https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=500" alt="Animals">
+      <span>🦋 Animals</span>
+    </a>
+
+    <a class="category" href="#gallery">
+      <img src="https://images.unsplash.com/photo-1472120435266-53107fd0c44a?w=500" alt="Sunset">
+      <span>🌅 Sunset</span>
     </a>
 
   </div>
+
 </section>
 
-<!-- WORLD NATURE -->
+<!-- GALLERY -->
 
-<section class="gallery-section" id="world">
-  <div class="container">
+<section id="gallery">
 
-    <div class="section-title">
-      <small>DISCOVER THE PLANET</small>
-      <h2>🌍 World Nature</h2>
-      <p>Nature photographs collected from around the world.</p>
-    </div>
+  <h2 class="section-title">📸 World Nature</h2>
+  <p class="section-subtitle">Beautiful moments from the natural world</p>
 
-    <div class="filter-buttons" id="worldFilters">
-      <button class="active" data-filter="All">All</button>
-      <button data-filter="Forest">Forest</button>
-      <button data-filter="Mountains">Mountains</button>
-      <button data-filter="Rivers">Rivers</button>
-      <button data-filter="Flowers">Flowers</button>
-      <button data-filter="Animals">Animals</button>
-      <button data-filter="Sunset">Sunset</button>
-    </div>
+  <div class="gallery-grid">
 
-    <div class="gallery-grid" id="worldGrid">
-
-      <div class="photo-card" data-category="Forest">
-        <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=85" alt="Forest">
-        <h3>Forest Beauty</h3>
-        <p>Forest · World Nature</p>
-      </div>
-
-      <div class="photo-card" data-category="Mountains">
-        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=85" alt="Mountains">
-        <h3>Mountain View</h3>
-        <p>Mountains · World Nature</p>
-      </div>
-
-      <div class="photo-card" data-category="Rivers">
-        <img src="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=800&q=85" alt="River">
-        <h3>Flowing Water</h3>
-        <p>Rivers · World Nature</p>
-      </div>
-
-      <div class="photo-card" data-category="Flowers">
-        <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=800&q=85" alt="Flowers">
-        <h3>Flower Moments</h3>
-        <p>Flowers · World Nature</p>
-      </div>
-
-      <div class="photo-card" data-category="Animals">
-        <img src="https://images.unsplash.com/photo-1474511320723-9a56873867b5?auto=format&fit=crop&w=800&q=85" alt="Animal">
-        <h3>Wildlife Beauty</h3>
-        <p>Animals · World Nature</p>
-      </div>
-
-      <div class="photo-card" data-category="Sunset">
-        <img src="https://images.unsplash.com/photo-1472120435266-53107fd0c44a?auto=format&fit=crop&w=800&q=85" alt="Sunset">
-        <h3>Golden Sunset</h3>
-        <p>Sunset · World Nature</p>
-      </div>
-
-    </div>
-
-    <p class="empty-message" id="worldEmpty">
-      No photos in this category yet.
-    </p>
-
-    <div class="upload-area">
-      <h3>🌍 Add World Nature Photos</h3>
-      <p>Download permitted photos and upload them to your GitHub repository inside images/world/.</p>
-      <p class="upload-note">
-        Remember to include the photographer or source credit where required.
-      </p>
-    </div>
+    <div class="photo"><img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=700" alt="Forest"></div>
+    <div class="photo"><img src="https://images.unsplash.com/photo-1508615070457-7baeba4003ab?w=700" alt="Flower"></div>
+    <div class="photo"><img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?w=700" alt="Wildlife"></div>
+    <div class="photo"><img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=700" alt="Flowers"></div>
+    <div class="photo"><img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=700" alt="Leaves"></div>
+    <div class="photo"><img src="https://images.unsplash.com/photo-1472120435266-53107fd0c44a?w=700" alt="Sunset"></div>
 
   </div>
+
+</section>
+
+<!-- MOVING PHOTOS -->
+
+<section>
+
+  <h2 class="section-title">✨ Nature in Motion ✨</h2>
+
+  <div class="moving-strip">
+    <div class="moving-track">
+
+      <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=500" alt="Forest">
+      <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=500" alt="Mountains">
+      <img src="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?w=500" alt="River">
+      <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=500" alt="Flowers">
+      <img src="https://images.unsplash.com/photo-1472120435266-53107fd0c44a?w=500" alt="Sunset">
+
+      <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=500" alt="Forest">
+      <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=500" alt="Mountains">
+      <img src="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?w=500" alt="River">
+      <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=500" alt="Flowers">
+      <img src="https://images.unsplash.com/photo-1472120435266-53107fd0c44a?w=500" alt="Sunset">
+
+    </div>
+  </div>
+
 </section>
 
 <!-- MY PHOTOGRAPHY -->
 
 <section id="myphotos">
-  <div class="container">
 
-    <div class="section-title">
-      <small>MY CAMERA · MY MOMENTS</small>
-      <h2>📸 My Photography</h2>
-      <p>My own photographs and beautiful moments captured by me.</p>
+  <h2 class="section-title">📷 My Photography</h2>
+
+  <p class="section-subtitle">
+    Capturing beautiful moments through my camera
+  </p>
+
+  <div class="gallery-grid">
+
+    <div class="photo">
+      <img src="images/IMG-20260921-WA0066.jpg" alt="My Photography">
     </div>
-
-    <div class="filter-buttons" id="myFilters">
-      <button class="active" data-filter="All">All</button>
-      <button data-filter="Forest">Forest</button>
-      <button data-filter="Mountains">Mountains</button>
-      <button data-filter="Rivers">Rivers</button>
-      <button data-filter="Flowers">Flowers</button>
-      <button data-filter="Animals">Animals</button>
-      <button data-filter="Sunset">Sunset</button>
-    </div>
-
-    <div class="gallery-grid" id="myGrid">
-      <!-- Your own uploaded GitHub photos will appear here. -->
-    </div>
-
-    <p class="empty-message" id="myEmpty" style="display:block;">
-      Your photography collection will appear here.
-    </p>
-
-    <div class="upload-area">
-      <h3>📷 Preview Your Own Photos</h3>
-      <p>Select photos from your phone to preview them here.</p>
-
-      <label for="myPhotoInput" class="upload-button">
-        + Choose My Photos
-      </label>
-
-      <input
-        class="file-input"
-        type="file"
-        id="myPhotoInput"
-        accept="image/*"
-        multiple
-      >
-
-      <p class="upload-note">
-        Preview is temporary. To publish photos permanently, upload them to GitHub.
-      </p>
-    </div>
-
-  </div>
-</section>/* About Me Mobile Layout Fix */
-@media (max-width: 600px) {
-
-  .about-inner {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 22px !important;
-    width: 100% !important;
-  }
-
-  .profile-photo {
-    width: 160px !important;
-    height: 160px !important;
-    object-fit: cover;
-    flex-shrink: 0;
-  }
-
-  .about-copy {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    text-align: center !important;
-    box-sizing: border-box;
-  }
-
-  .about-copy p {
-    width: 100% !important;
-    word-break: normal;
-    overflow-wrap: break-word;
-    line-height: 1.9;
-  }
-}
-
-</main>
-
-<!-- ABOUT ME -->
-
-<section class="about-footer" id="about">
-
-  <div class="about-column">
-
-    <h2 class="about-title">♟ About Me</h2>
-
-    <div class="about-inner">
-
-      <img
-        class="profile-photo"
-  
-        alt="Shahriar Ahsan Samy"
-      src="images/IMG-20260921-WA0066.jpg"
-
-      <div class="about-copy">
-
-        <strong>Shahriar Ahsan Samy ♥</strong>
-
-        <p>
-          প্রকৃতির সৌন্দর্য আর চারপাশের ছোট ছোট মুহূর্তগুলো
-          আমাকে মুগ্ধ করে। সেই সুন্দর মুহূর্তগুলোকে ছবির মাধ্যমে
-          স্মৃতিতে ধরে রাখা এবং সবার সঙ্গে ভাগ করে নেওয়ার
-          ছোট্ট একটি প্রচেষ্টা থেকেই GreenScape-এর যাত্রা।
-        </p>
-
-        <p class="creator-name">
-          — GreenScape-এর নির্মাতা
-        </p>
-
-      </div>
-    </div>
-  </div>
-
-  <div class="about-column" id="contact">
-
-    <h2 class="about-title">● Follow Me On</h2>
-
-    <div class="social-row">
-      <a class="social-item youtube" href="#" aria-label="YouTube">▶</a>
-      <a class="social-item tiktok" href="#" aria-label="TikTok">♪</a>
-      <a class="social-item facebook" href="#" aria-label="Facebook">f</a>
-    </div>
-
-    <p class="social-note">
-      Let's Explore Nature Together <span>♥</span>
-    </p>
 
   </div>
 
 </section>
 
-<footer class="bottom-footer">
+<!-- ABOUT ME -->
+
+<section id="about">
+
+  <h2 class="section-title">👤 About Me</h2>
+
+  <div class="about-card">
+
+    <img
+      class="profile-photo"
+      src="images/IMG-20260921-WA0066.jpg"
+      alt="Shahriar Ahsan Samy"
+    >
+
+    <div class="about-text">
+
+      <h3>Shahriar Ahsan Samy 💚</h3>
+
+      <p>
+        প্রকৃতির সৌন্দর্য আর চারপাশের ছোট ছোট মুহূর্তগুলো
+        আমাকে মুগ্ধ করে। সেই সুন্দর মুহূর্তগুলোকে ছবির মাধ্যমে
+        স্মৃতিতে ধরে রাখা এবং সবার সঙ্গে ভাগ করে নেওয়ার
+        ছোট্ট একটি প্রচেষ্টা থেকেই GreenScape-এর যাত্রা।
+      </p>
+
+      <p class="creator">
+        — GreenScape-Creator
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+  <h2 class="section-title">🌿 Follow Me On</h2>
+
+  <div class="social-row">
+
+    <a href="#" aria-label="Facebook">f</a>
+    <a href="#" aria-label="YouTube">▶</a>
+    <a href="#" aria-label="Instagram">◎</a>
+    <a href="#" aria-label="TikTok">♪</a>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
   <p>🍃 © 2026 GreenScape. All Rights Reserved.</p>
-  <p>Created with ♥ by <strong>Shahriar Ahsan Samy</strong></p>
+
+  <p>Developed by <span>Shahriar Ahsan Samy 💚</span></p>
+
+  <p>Let's Explore Nature Together.</p>
+
 </footer>
 
-<!-- LIGHTBOX -->
+<!-- IMAGE LIGHTBOX -->
 
 <div class="lightbox" id="lightbox">
-  <button class="close-lightbox" id="closeLightbox">×</button>
+  <span class="close-lightbox" id="closeLightbox">×</span>
   <img id="lightboxImage" src="" alt="Nature photograph">
 </div>
 
 <script>
 
-// SEPARATE GALLERY FILTERS
+/* MOBILE MENU */
 
-function setupFilters(filterAreaId, galleryId, emptyId) {
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
 
-  const buttons = document.querySelectorAll(
-    "#" + filterAreaId + " button"
-  );
-
-  const cards = document.querySelectorAll(
-    "#" + galleryId + " .photo-card"
-  );
-
-  const empty = document.getElementById(emptyId);
-
-  function filter(category) {
-
-    let visible = 0;
-
-    cards.forEach(card => {
-
-      const show =
-        category === "All" ||
-        card.dataset.category === category;
-
-      card.classList.toggle("hide", !show);
-
-      if (show) visible++;
-    });
-
-    buttons.forEach(button => {
-
-      button.classList.toggle(
-        "active",
-        button.dataset.filter === category
-      );
-
-    });
-
-    if (empty) {
-      empty.style.display =
-        visible === 0 ? "block" : "none";
-    }
-  }
-
-  buttons.forEach(button => {
-
-    button.addEventListener("click", () => {
-      filter(button.dataset.filter);
-    });
-
-  });
-}
-
-setupFilters("worldFilters", "worldGrid", "worldEmpty");
-setupFilters("myFilters", "myGrid", "myEmpty");
-
-// MY PHOTO TEMPORARY PREVIEW
-
-document.getElementById("myPhotoInput").addEventListener("change", event => {
-
-  const files = Array.from(event.target.files);
-  const grid = document.getElementById("myGrid");
-
-  files.forEach(file => {
-
-    if (!file.type.startsWith("image/")) return;
-
-    const imageURL = URL.createObjectURL(file);
-
-    const card = document.createElement("div");
-    card.className = "photo-card";
-    card.dataset.category = "Forest";
-
-    const img = document.createElement("img");
-    img.src = imageURL;
-    img.alt = file.name;
-
-    const title = document.createElement("h3");
-    title.textContent = file.name;
-
-    const label = document.createElement("p");
-    label.textContent = "My Photography · Local Preview";
-
-    card.append(img, title, label);
-
-    grid.prepend(card);
-  });
-
-  document.getElementById("myEmpty").style.display =
-    grid.querySelectorAll(".photo-card").length ? "none" : "block";
-
-  event.target.value = "";
-
+menuBtn.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+  menuBtn.textContent = navLinks.classList.contains("active") ? "✕" : "☰";
 });
 
-// LIGHTBOX FOR BOTH GALLERIES
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+    menuBtn.textContent = "☰";
+  });
+});
+
+/* IMAGE LIGHTBOX */
 
 const lightbox = document.getElementById("lightbox");
 const lightboxImage = document.getElementById("lightboxImage");
 
-document.body.addEventListener("click", event => {
-
-  if (
-    event.target.tagName === "IMG" &&
-    event.target.closest(".gallery-grid")
-  ) {
-
-    lightboxImage.src = event.target.src;
-    lightbox.classList.add("open");
-  }
-
+document.querySelectorAll(".photo img").forEach(img => {
+  img.addEventListener("click", () => {
+    lightboxImage.src = img.src;
+    lightbox.classList.add("active");
+  });
 });
 
-function closeLightbox() {
-  lightbox.classList.remove("open");
-  lightboxImage.src = "";
-}
-
-document.getElementById("closeLightbox").addEventListener(
-  "click",
-  closeLightbox
-);
+document.getElementById("closeLightbox").addEventListener("click", () => {
+  lightbox.classList.remove("active");
+});
 
 lightbox.addEventListener("click", event => {
-
-  if (event.target === lightbox) {
-    closeLightbox();
+  if(event.target === lightbox){
+    lightbox.classList.remove("active");
   }
-
-});
-
-document.addEventListener("keydown", event => {
-
-  if (event.key === "Escape") {
-    closeLightbox();
-  }
-
 });
 
 </script>
